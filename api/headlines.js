@@ -17,7 +17,7 @@ export default async function handler(req, res) {
       content:article.content
     }));
 
-    res.status(200).json({ country, total: articles.length, articles });
+    res.status(200).json({ q, total: articles.length, articles });
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch news...', details: error.message });
   }
